@@ -1,202 +1,321 @@
-:root {
-  /* Paleta Vermelho Meme Kasane Teto */
-  --bg: #ff002b;
-  --surface: #fff5f6;
-  --surface-alt: #ffe0e5;
-  --text: #1a0005;
-  --muted: #660011;
-  --teto-red: #d90024;
-  --teto-dark: #800015;
-  --border: #1a0005;
-}
+<!DOCTYPE html>
+<html lan<g="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PERSONALIZE: Coloque o seu nome no título da aba -->
+    <title>[Seu Nome] — 0401</title>
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <style>
+        /* =========================================================
+           PALETA DE CORES KASANE TETO (Limpa & Minimalista)
+           - Fundo claro/off-white para leitura leve e limpa
+           - Carmim / Vermelho Teto (#d62839 e #a4161a) nos detalhes
+           - Cinza ardósia (#495057) inspirado no uniforme dela
+           ========================================================= */
+        :root {
+            --bg-color: #fafafa;
+            --surface-color: #ffffff;
+            --text-main: #1f2328;
+            --text-muted: #57606a;
+            --teto-red: #d62839;
+            --teto-crimson: #a4161a;
+            --teto-soft-pink: #fff0f3;
+            --uniform-gray: #495057;
+            --border-color: #e5e7eb;
+        }
 
-::selection {
-  background-color: var(--text);
-  color: var(--bg);
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--bg);
-  /* Listra sutil no fundo para dar um charme retrô/meme sem poluir */
-  background-image: radial-gradient(var(--teto-dark) 1px, transparent 1px);
-  background-size: 20px 20px;
-  color: var(--text);
-  line-height: 1.6;
-  padding: 2.5rem 1.25rem;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.container {
-  max-width: 680px;
-  margin: 0 auto;
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            /* Faixa superior discreta inspirada nos detalhes vermelhos do uniforme da Teto */
+            border-top: 4px solid var(--teto-red);
+        }
 
-/* Cabeçalho */
-header {
-  background: var(--surface);
-  border: 3px solid var(--border);
-  box-shadow: 6px 6px 0px var(--border);
-  border-radius: 10px;
-  padding: 1.75rem;
-  margin-bottom: 1.75rem;
-}
+        /* Container central estreito para manter o site bem limpo */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-.teto-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #ffffff;
-  background: var(--teto-red);
-  border: 2px solid var(--border);
-  padding: 0.3rem 0.7rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
+        a {
+            color: var(--teto-red);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
 
-.drill-icon {
-  width: 18px;
-  height: 18px;
-}
+        a:hover {
+            color: var(--teto-crimson);
+            text-decoration: underline;
+        }
 
-h1 {
-  font-size: 2.3rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  margin-bottom: 0.4rem;
-}
+        /* =========================================================
+           CABEÇALHO E NAVEGAÇÃO
+           ========================================================= */
+        header {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-.subtitle {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--muted);
-}
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* Cartões de Conteúdo */
-.card {
-  background: var(--surface);
-  border: 3px solid var(--border);
-  box-shadow: 6px 6px 0px var(--border);
-  border-radius: 10px;
-  padding: 1.75rem;
-  margin-bottom: 1.75rem;
-}
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
 
-h2 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 800;
-  color: var(--teto-red);
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--surface-alt);
-  padding-bottom: 0.4rem;
-}
+        /* Selo numérico "0401" (referência clássica à Kasane Teto) */
+        .teto-badge {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--teto-red);
+            background-color: var(--teto-soft-pink);
+            border: 1px solid #ffccd5;
+            padding: 2px 7px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
 
-p {
-  font-size: 1rem;
-}
+        nav a {
+            color: var(--uniform-gray);
+            margin-left: 22px;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
 
-/* Grade de Interesses */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
+        nav a:hover {
+            color: var(--teto-red);
+            text-decoration: none;
+        }
 
-.item {
-  background: var(--surface-alt);
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  padding: 1.1rem;
-  transition: transform 0.15s ease;
-}
+        /* =========================================================
+           SEÇÕES GERAIS
+           ========================================================= */
+        section {
+            padding: 56px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-.item:hover {
-  transform: translate(-2px, -2px);
-}
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            margin-bottom: 14px;
+        }
 
-.tag {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  background: var(--teto-red);
-  color: #ffffff;
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
-  margin-bottom: 0.45rem;
-}
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.item h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
+        /* Pequeno traço carmim antes dos títulos das seções */
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 3px;
+            background-color: var(--teto-red);
+            border-radius: 2px;
+        }
 
-.item p {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
+        p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
 
-/* Rodapé */
-footer {
-  background: var(--surface);
-  border: 3px solid var(--border);
-  box-shadow: 6px 6px 0px var(--border);
-  border-radius: 10px;
-  padding: 1.25rem 1.75rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
+        p:last-child {
+            margin-bottom: 0;
+        }
 
-.links {
-  display: flex;
-  gap: 0.75rem;
-}
+        /* =========================================================
+           1. APRESENTAÇÃO (HERO) COM ÍCONE MINIMALISTA TWIN DRILLS
+           ========================================================= */
+        .hero {
+            padding: 68px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
 
-a {
-  color: #ffffff;
-  background: var(--teto-red);
-  border: 2px solid var(--border);
-  padding: 0.35rem 0.85rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 700;
-  transition: background-color 0.15s ease, transform 0.1s ease;
-}
+        .hero-text {
+            max-width: 540px;
+        }
 
-a:hover {
-  background-color: var(--teto-dark);
-  transform: translateY(-1px);
-}
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
 
-.meme-note {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--muted);
-}
+        .destaque {
+            color: var(--teto-red);
+        }
 
-@media (max-width: 500px) {
-  h1 {
-    font-size: 1.85rem;
-  }
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+        /* Ilustração SVG minimalista das espirais (Twin Drills) da Kasane Teto */
+        .teto-drills-icon {
+            flex-shrink: 0;
+            width: 76px;
+            height: 76px;
+            background-color: var(--teto-soft-pink);
+            border: 1px solid #ffccd5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* =========================================================
+           3. INTERESSES & STACK (GRADE LIMPA)
+           ========================================================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--teto-red);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--teto-crimson);
+            background-color: var(--teto-soft-pink);
+            padding: 2px 8px;
+            border-radius: 99px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+        }
+
+        /* Lista de tags rápidas para ferramentas e gostos */
+        .tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 22px;
+        }
+
+        .pill {
+            font-size: 0.82rem;
+            color: var(--uniform-gray);
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 4px 12px;
+            border-radius: 99px;
+        }
+
+        .pill.accent {
+            color: var(--teto-crimson);
+            border-color: #ffccd5;
+            background-color: var(--teto-soft-pink);
+        }
+
+        /* =========================================================
+           4. RODAPÉ E CONTATO
+           ========================================================= */
+        footer {
+            padding: 44px 0;
+            text-align: center;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .contato-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        .contato-links a {
+            color: var(--uniform-gray);
+            font-weight: 500;
+        }
+
+        .contato-links a:hover {
+            color: var(--teto-red);
+        }
+
+        .teto-sign {
+            font-size: 0.82rem;
+            color: #8c959f;
+        }
+
+        /* =========================================================
+           RESPONSIVIDADE (CELULARES)
+           ========================================================= */
+        @media (max-width: 600px) {
+            header .container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                padding: 48px 0;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>

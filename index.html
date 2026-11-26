@@ -1,133 +1,98 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Seu Nome] — 0401</title>
+  <link rel="stylesheet" href="index.css">
+</head>
 <body>
 
-    <!-- 1. CABEÇALHO -->
-    <header>
-        <div class="container">
-            <div class="brand">
-                <!-- PERSONALIZE: Seu nome -->
-                <span> Robiso fih </span>
-                <!-- Referência sutil à Kasane Teto (código 0401) -->
-                <span class="teto-badge" title="Kasane Teto 0401">0401</span>
-            </div>
-            <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#interesses">Interesses</a>
-              
-            </nav>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="top-bar">
+        <div class="teto-pill">
+          <svg class="drill-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <path d="M6 16c0-5 4-9 9-9 4 0 7 3 7 7 0 3-2.5 5.5-5.5 5.5-2.2 0-4-1.8-4-4 0-1.5 1.2-2.5 2.5-2.5" />
+            <path d="M26 16c0 5-4 9-9 9-4 0-7-3-7-7 0-3 2.5-5.5 5.5-5.5 2.2 0 4 1.8 4 4 0 1.5-1.2 2.5-2.5 2.5" />
+          </svg>
+          <span>0401 // KASANE EDITION</span>
         </div>
+        <span class="status-dot" title="Status atual">💤 Modo Economia</span>
+      </div>
+
+      <h1>[Seu Nome]</h1>
+      <p class="subtitle">
+        Código em baixo nível, leis da física, guitarra e sonecas estratégicas.
+      </p>
+
+      <div class="stack-pills">
+        <span>Rust</span>
+        <span>C++</span>
+        <span>Python</span>
+        <span>Física</span>
+        <span>Guitarra</span>
+      </div>
     </header>
 
-    <main class="container">
-        <!-- APRESENTAÇÃO -->
-        <section class="hero">
-            <div class="hero-text">
-                <!-- PERSONALIZE: Seu nome -->
-                <h1>Olá, eu sou <span class="destaque">Robson filho</span>.</h1>
-                <p class="hero-subtitle">
-                    Gosto de programar em <strong>Rust</strong>, <strong>C++</strong> e <strong>Python</strong>, tocar <strong>guitarra</strong>, estudar <strong>física</strong>, jogar e aproveitar boas horas de sono.
-                </p>
-            </div>
+    <section class="panel about">
+      <div class="section-label">01 // SOBRE MIM</div>
+      <p>
+        Gosto de interfaces limpas, código rápido e de entender como o universo funciona nas entrelinhas. 
+        Este cantinho é simples de propósito — sem frameworks pesados, sem distrações, só uma dose 
+        saudável (e questionável) de vermelho Kasane Teto.
+      </p>
+    </section>
 
-            <!-- Elemento visual minimalista: SVG remetendo às espirais (twin drills) da Kasane Teto -->
-            <div class="teto-drills-icon" aria-hidden="true" title="Kasane Teto Theme">
-                <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Espiral Esquerda -->
-                    <path d="M26 14C19 14 15 19 15 24C15 29 21 31 25 31C20 32 13 35 13 41C13 46 19 48 24 48C20 49 17 52 18 55" 
-                          stroke="#d62839" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <!-- Espiral Direita -->
-                    <path d="M38 14C45 14 49 19 49 24C49 29 43 31 39 31C44 32 51 35 51 41C51 46 45 48 40 48C44 49 47 52 46 55" 
-                          stroke="#a4161a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <!-- Detalhe central (laço/presilha) -->
-                    <circle cx="32" cy="18" r="3" fill="#495057"/>
-                </svg>
-            </div>
-        </section>
-
-        <!-- 2. SOBRE MIM -->
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>
-                Aprecio páginas web limpas, diretas e sem poluição visual — exatamente como este espaço. No computador, passo o tempo explorando código em <strong>Rust</strong>, <strong>C++</strong> e <strong>Python</strong>, sempre curioso sobre performance e boas ideias.
-            </p>
-            <p>
-                Longe do editor de código, gosto de entender como o universo funciona estudando <strong>física</strong>, tirar um som na <strong>guitarra</strong>, relaxar jogando alguma coisa boa e, claro, valorizar uma ótima noite de <strong>sono</strong>.
-            </p>
-        </section>
-
-        <!-- 3. INTERESSES & STACK -->
-        <section id="interesses">
-            <h2>Interesses & Stack</h2>
-            
-            <div class="grid">
-                <!-- Card 1: Programação -->
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Programação</h3>
-                        <span class="card-tag">Código</span>
-                    </div>
-                    <p>
-                        Foco em <strong>Rust</strong>, <strong>C++</strong> e <strong>Python</strong> — combinando segurança de memória, controle de baixo nível e agilidade para scripts.
-                    </p>
-                </div>
-
-                <!-- Card 2: Música -->
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Guitarra</h3>
-                        <span class="card-tag">Música</span>
-                    </div>
-                    <p>
-                        Prática diária, riffs e improvisação para desconectar a mente e exercitar a criatividade.
-                    </p>
-                </div>
-
-                <!-- Card 3: Ciência -->
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Física</h3>
-                        <span class="card-tag">Ciência</span>
-                    </div>
-                    <p>
-                        Curiosidade pelas leis da natureza, mecânica e pela lógica matemática por trás de como tudo opera.
-                    </p>
-                </div>
-
-                <!-- Card 4: Lazer -->
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Jogos & Dormir</h3>
-                        <span class="card-tag">Descanso</span>
-                    </div>
-                    <p>
-                        Jogar para se divertir nas horas livres e levar a sério o descanso para recarregar as energias.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Tags rápidas de resumo -->
-            <div class="tags-row">
-                <span class="pill accent">Rust</span>
-                <span class="pill accent">C++</span>
-                <span class="pill accent">Python</span>
-                <span class="pill">Guitarra</span>
-                <span class="pill">Física</span>
-                <span class="pill">Jogos</span>
-                <span class="pill">Dormir</span>
-                <span class="pill">Web Minimalista</span>
-            </div>
-        </section>
-    </main>
-
-   
-            </div>
-            <p class="teto-sign">
-                Feito com estética minimalista & inspiração Kasane Teto (0401) • [Robson/nosibor]
-            </p>
+    <section class="grid">
+      <article class="card">
+        <div class="card-head">
+          <span class="icon">⚡</span>
+          <span class="tag">Código</span>
         </div>
+        <h3>Rust, C++ & Python</h3>
+        <p>Do controle total de memória e performance até scripts rápidos para resolver qualquer problema.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="icon">⚛️</span>
+          <span class="tag">Ciência</span>
+        </div>
+        <h3>Física</h3>
+        <p>Fascinado pela lógica por trás da realidade, equações e fenômenos que regem tudo ao redor.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="icon">🎸</span>
+          <span class="tag">Música</span>
+        </div>
+        <h3>Guitarra</h3>
+        <p>Treinando riffs, escalas e acordes entre uma compilação e outra.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="icon">🎮</span>
+          <span class="tag">Off-line</span>
+        </div>
+        <h3>Jogar & Dormir</h3>
+        <p>Recarregando a bateria entre partidas e mantendo o sono rigorosamente em dia.</p>
+      </article>
+    </section>
+
+    <footer>
+      <div class="links">
+        <a href="https://github.com/[seu-usuario]" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="mailto:[seu.email@exemplo.com]">E-mail ↗</a>
+      </div>
+      <span class="meme-tag">Feito com HTML + CSS puro 🥖</span>
     </footer>
+  </main>
 
 </body>
 </html>
-
-

@@ -1,0 +1,202 @@
+:root {
+  /* Paleta Vermelho Meme Kasane Teto */
+  --bg: #ff002b;
+  --surface: #fff5f6;
+  --surface-alt: #ffe0e5;
+  --text: #1a0005;
+  --muted: #660011;
+  --teto-red: #d90024;
+  --teto-dark: #800015;
+  --border: #1a0005;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  /* Listra sutil no fundo para dar um charme retrô/meme sem poluir */
+  background-image: radial-gradient(var(--teto-dark) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--text);
+  line-height: 1.6;
+  padding: 2.5rem 1.25rem;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--surface);
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0px var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.teto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: var(--teto-red);
+  border: 2px solid var(--border);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.drill-icon {
+  width: 18px;
+  height: 18px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* Cartões de Conteúdo */
+.card {
+  background: var(--surface);
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0px var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--teto-red);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--surface-alt);
+  padding-bottom: 0.4rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Grade de Interesses */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.item {
+  background: var(--surface-alt);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 1.1rem;
+  transition: transform 0.15s ease;
+}
+
+.item:hover {
+  transform: translate(-2px, -2px);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--teto-red);
+  color: #ffffff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.45rem;
+}
+
+.item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.item p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Rodapé */
+footer {
+  background: var(--surface);
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0px var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+a {
+  color: #ffffff;
+  background: var(--teto-red);
+  border: 2px solid var(--border);
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+a:hover {
+  background-color: var(--teto-dark);
+  transform: translateY(-1px);
+}
+
+.meme-note {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.85rem;
+  }
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
